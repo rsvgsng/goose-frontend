@@ -3,16 +3,6 @@ import styles from './SignupStudent.module.css'
 import { Form, Input, Button, Row, Col, Select, DatePicker, notification, } from 'antd';
 
 const { Option } = Select;
-interface Idata{
-  fullName:string
-  email:string
-  password:string
-  wantshelpIn:[]
-  gender:string
-  location:string
-  userName:string
-  
-}
 
 const SignupStudent: React.FC = () => {
   const [loadingg,setLoading] = useState(false)
@@ -134,7 +124,7 @@ const SignupStudent: React.FC = () => {
 
 
                   >
-                    <Select  defaultValue={"Male"}   >
+                    <Select    >
 
                       <Option value="Male">Male</Option>
                       <Option value="Female">Female</Option>
@@ -151,7 +141,8 @@ const SignupStudent: React.FC = () => {
 
                   >
 
-                    <Select  defaultValue={"Nepal"}   >
+                    <Select
+                       >
 
                       <Option value="Nepal">Nepal</Option>
                       <Option value="India">India</Option>
@@ -168,12 +159,12 @@ const SignupStudent: React.FC = () => {
                 <Col lg={12} sm={24} xs={24} md={24}>
                   <Form.Item
                     name={'qualification'}
-                    label={'Your Qualification'}
+                    label={'Your Running Education'}
                     rules={[{ required: true, message: 'Please provide your Qualification!' }]}
 
                     help="Eg Bachelor's in Computer Science"
                     >
-                      <Input name='qualification' placeholder='Your Qualification' />
+                      <Input name='qualification' placeholder='Your Education' />
 
                     </Form.Item>
                     </Col>
