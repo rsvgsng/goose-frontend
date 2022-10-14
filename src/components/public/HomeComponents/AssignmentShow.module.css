@@ -1,0 +1,46 @@
+.sectionAsignmentList{
+    margin-bottom: 90px;
+}
+.left_items{
+    margin-top: 80px;
+    
+    
+}
+.left_items p{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(51, 48, 48);
+    margin-top: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    margin-bottom: 20px;
+}
+.left_items  span{
+    font-size: 36px;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    font-weight: 700;
+    
+    color: #31A12E;
+    margin-bottom: 20px;
+}
+
+.right_items_slides{
+
+    padding: 10px;
+    display: flex;
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .left_items{
+        margin-top: 40px;
+    }
+    .left_items h2,p{
+        text-align: center;
+    }
+    .left_items{
+        flex-direction: column-reverse;
+    }
+}

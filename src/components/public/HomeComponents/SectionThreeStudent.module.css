@@ -1,0 +1,71 @@
+.sectionThreeExpert{
+
+    background-color: #D6E1DF;
+}
+.sectionThreeContainer{
+    padding: 10px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.sectionThreeExpert ,.sectionThreeExpert h2{
+    font-size: 30px;
+   font-family: 'Roboto Condensed', sans-serif;
+  
+}
+
+.leftItem button{
+    padding: 10px;
+    border-radius:0px;
+    outline: none;
+    font-size: 30px;
+    color: white;
+   font-family: 'Jomhuria', cursive;
+    border: none;
+    cursor: pointer;
+    margin-top: 23px;
+    background: #31A12E;
+    transition: 0.3s ease-in-out;
+}
+
+.leftItem button:hover{
+    background: #000;
+    color: white;
+}
+.leftItem button:active{
+    scale: 0.9;
+        transition: 0.1s;
+}
+.leftItem span{
+    color: #31A12E;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    font-weight: 700;
+    font-size: 39px;
+}
+.leftItem p{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(51, 48, 48);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.rightExpert img{
+    border-radius: 8px;
+    box-shadow: 8px 8px 5px 1px #0000004d;
+}
+
+
+/* responsice */
+
+@media screen and (max-width: 600px) {
+    .leftItem h2{
+        text-align: center;
+    }
+    .leftItem p{
+        text-align: left;
+    }
+    .leftItem {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,24 @@
+.trustedByWrapper {
+    margin-top: 120px;
+    display: flex;
+    list-style: none;
+    margin-bottom: 90px;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.trustedByWrapper li {
+    margin: 0 20px;
+    margin-bottom: 20px
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+    .trustedByWrapper {
+        margin-top: 80px;
+        margin-bottom: 0px ;
+        flex-direction: column;
+    }
+  
+}

@@ -1,0 +1,119 @@
+.LoginExpert___section{
+    background-color: var(--back_color);
+
+}
+.expert__wrapper{
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.expert__wrapper__left,.expert__wrapper__right{
+    height: 600px;
+
+}
+
+.expert__wrapper__left{
+    background-color: #10493b;
+    padding: 30px;
+    background-image:url('https://i.ibb.co/Kjx533C/bll.jpg');
+    background-size: cover; 
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px
+}
+
+
+.expert__wrapper__left h2{
+    color: white;
+    font-size:40px;
+    text-transform: uppercase;
+    user-select: none;
+    font-weight: 600;
+    
+}
+
+.expert__wrapper__left p{
+    color: white;
+    user-select: none;
+    font-weight: 600;
+    
+}
+
+.expert__wrapper__right{
+    background-color: #f4fffc;
+    padding-top: 100px;
+    text-align: center;
+    box-shadow:  0 0 10px 0 rgba(31, 31, 31, 0.452);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px
+}
+.expert__wrapper__right svg{
+    color: #10493b;
+    font-size: 50px;
+    font-weight: 800;
+
+}
+.expert__wrapper form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expert__wrapper__right form input{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #10493b;
+    outline: none;
+    font-size: 13px;
+    margin-top: 25px;
+    font-weight: 600;
+    color: #10493b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.expert__wrapper__right form button{
+    width: 300px;
+    height: 40px;
+    border: none;
+    margin-top: 45px;
+    outline: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: #10493b;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.expert__wrapper__right  span{
+    display: none;
+    font-weight: 800;
+    color: rgb(46, 43, 43);
+}
+
+@media screen and (max-width:990px) {
+
+    .expert__wrapper__left{
+        display: none;
+    }
+    .expert__wrapper__right{
+        margin-right: 10px;
+        margin-left: 10px;
+        border-radius: 7px;
+    }
+    .expert__wrapper{
+        padding-top: 30px;
+    }
+    .expert__wrapper__right p {
+        display: none;
+    }
+    .expert__wrapper__right  span{
+        display: block;
+    }
+    
+
+}

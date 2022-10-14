@@ -1,0 +1,53 @@
+.talentSection{
+    margin-top: 50px;
+   font-family: 'Roboto Condensed', sans-serif;
+
+}
+.talent_cat_ttl span{ 
+    color: #31A12E;
+    font-weight: 800;
+    font-size: 30px;
+}
+.category__box{
+    user-select: none;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color:#3B5F58 ;
+    border-radius: 8px;
+    color: white;
+    height: 400px;
+    word-break: break-word;
+    height: auto;
+    position: relative;
+    height:200px;
+    overflow: hidden;
+
+}
+.subName h2{
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+.sub__meta{
+ display: flex;
+ place-content: end;
+ position: absolute;
+bottom: 0px;
+color: white;
+right: 12px;
+
+}
+.sub__meta h3{
+        color: white;
+    margin-top: 45px;
+    font-size: 15px;
+
+}
+.sub__meta span{
+    font-size: 15px;
+    margin-right: 8px;
+    font-weight: 800;
+    color: #36ff2f;
+}

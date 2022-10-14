@@ -1,0 +1,39 @@
+:root{
+  --back_color:rgb(241, 255, 233);
+}
+
+.bak{
+  border:1px solid black;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.center_hero{
+  align-items: center;
+}
+img { 
+  -webkit-user-drag: none; 
+  -khtml-user-drag: none; 
+  -moz-user-drag: none; 
+  -o-user-drag: none; 
+  user-drag: none; 
+}
+
+
+button:hover{
+  background: rgb(126, 122, 122);
+  color: white;
+}
+
+
+.rw-list-option.rw-state-selected{
+  background-color: #31A12E !important;
+  border-color  : #31A12E !important;
+  color: white;
+}
+
