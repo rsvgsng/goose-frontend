@@ -12,6 +12,7 @@ import LoginStudent from "./components/public/AuthComponents/LoginStudent";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 import SignupStudent from "./components/public/AuthComponents/SignupStudent";
+import SignupExpert  from "./components/public/AuthComponents/SignupExpert";
 import Signup from "./components/public/AuthComponents/Signup";
 
 
@@ -31,6 +32,7 @@ const  App:React.FC=():JSX.Element=> {
                 <Route path="/login/student" element={<LoginStudent />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/signup/student" element={<SignupStudent />} />
+                <Route path="/signup/expert" element={<SignupExpert />} />
           
                 <Route path="*" element={<NotFound />} />
 
