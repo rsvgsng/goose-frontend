@@ -1,7 +1,25 @@
 import React from 'react'
 import styles from './LoginExpert.module.css'
 import {RiLoginCircleFill} from 'react-icons/ri'
+import {notification} from 'antd'
+
+
+
+
+
+
 const LoginExpert: React.FC = (): JSX.Element => {
+  // get query from the url
+  const query = new URLSearchParams(window.location.search)
+  if(query.get('success')=='true'){
+    notification.success({
+      message: 'Success',
+      description: 'Your Account has been activated successfully.', 
+      placement: 'top'
+    })
+  }
+
+
   return (
 
     <div className={styles.LoginExpert___section}>

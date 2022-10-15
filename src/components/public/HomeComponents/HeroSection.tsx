@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import DropdownList from "react-widgets/DropdownList";
 import { Link } from "react-router-dom";
+import { Modal } from 'antd';
+
 
 import styles from './HeroSection.module.css'
 const HeroSection: React.FC = (): JSX.Element => {
@@ -10,7 +12,7 @@ const HeroSection: React.FC = (): JSX.Element => {
     const [lado, setLado] = useState<string>("")
     const helps: string[] = ["EXAM ", "NOTES", "DOUBT", "SOLUTIONS", "PRACTICE", "PAPERS"]
     const level: string[] = ["Secondary Level","Bachelor", "Master", "PhD"]
-
+    const [isopen, setIsOpen] = useState<boolean>(false)
 
 const getSubject  = async  ()  : Promise<void>=>{
     setLoading(true)
@@ -20,7 +22,17 @@ const getSubject  = async  ()  : Promise<void>=>{
     setLado(data)
     setLoading(false)
 }
+const showModal = () => {
+    setIsOpen(true);
+  };
 
+  const handleOk = () => {
+    setIsOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsOpen(false);
+  };
 
     const interVal = setInterval(() => {
 
@@ -43,7 +55,17 @@ const getSubject  = async  ()  : Promise<void>=>{
             <div className="container"  >
 
                 <div className="row center_hero" >
-                   
+                <Modal
+                
+                open={isopen}
+                 onOk={handleOk}
+                  onCancel={handleCancel}
+        
+                  centered
+                
+                >
+                    dasda
+                </Modal>
 
 
                     <div className="col-lg-6  col-md-12  ">
@@ -95,7 +117,7 @@ const getSubject  = async  ()  : Promise<void>=>{
                             <div className="col-lg-2 col-md-12">
                             <div className={styles.drop__down__search}>
 
-                                <button    onClick={()=>getSubject()} > 
+                                <button    onClick={()=>{getSubject();setIsOpen(true)}} > 
                                     {loading?'loading...':'Search'}
                                 </button>
                     </div>

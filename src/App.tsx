@@ -33,6 +33,7 @@ const  App:React.FC=():JSX.Element=> {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/signup/student" element={<SignupStudent />} />
                 <Route path="/signup/expert" element={<SignupExpert />} />
+                <Route path="/signup/expert/next" element={<SignupExpert />} />
           
                 <Route path="*" element={<NotFound />} />
 
