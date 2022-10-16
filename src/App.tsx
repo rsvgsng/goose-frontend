@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css'
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import PrivateRoute from "./components/misc/PrivateRoute";
 
 //Components
 
@@ -14,6 +15,7 @@ import NotFound from "./components/NotFound";
 import SignupStudent from "./components/public/AuthComponents/SignupStudent";
 import SignupExpert  from "./components/public/AuthComponents/SignupExpert";
 import Signup from "./components/public/AuthComponents/Signup";
+import Dashboard from "./components/public/PrivateComponents/ExpertComponents/Dashboard";
 
 
 
@@ -34,6 +36,12 @@ const  App:React.FC=():JSX.Element=> {
                 <Route path="/signup/student" element={<SignupStudent />} />
                 <Route path="/signup/expert" element={<SignupExpert />} />
                 <Route path="/signup/expert/next" element={<SignupExpert />} />
+                  {/* student dashboard */}
+
+                <Route element={<PrivateRoute/>}> 
+                  <Route path="/dashboard" element={<Dashboard />} />
+                    
+                </Route>
           
                 <Route path="*" element={<NotFound />} />
 
