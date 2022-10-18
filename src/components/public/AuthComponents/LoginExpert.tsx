@@ -2,16 +2,19 @@ import React, { useState,useEffect } from 'react'
 import styles from './LoginExpert.module.css'
 import { RiLoginCircleFill } from 'react-icons/ri'
 import { notification } from 'antd'
-
+import { useNavigate } from 'react-router-dom'
 
 
 
 
 const LoginExpert: React.FC = (): JSX.Element => {
 
+   
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
+  let navigate = useNavigate();
+
 
 
   const login = async ():Promise<void> =>{
@@ -21,6 +24,7 @@ const LoginExpert: React.FC = (): JSX.Element => {
     return notification.error({message: 'Error',description: 'Please fill all the fields',})
  
     if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))  return notification.error({message:'Invalid Email'})
+
     setLoading(true)
     
        try {
@@ -38,8 +42,13 @@ const LoginExpert: React.FC = (): JSX.Element => {
           .then((res) => res.json())  
           .then((data) => {
            if(data.code==200) {
-            localStorage.setItem('token', data.token) 
-            notification.success({message: 'Success',description: 'Login Successful',placement:'topRight'})
+            localStorage.removeItem('token') 
+
+             localStorage.setItem('token', data.token) 
+
+            if(data.ds===false) return navigate('/setup/initial/expert');
+
+            return navigate ('/dashboard')
             
            }else{
              notification.error({message: 'Error',description:data.msg,placement:'topRight'})
@@ -48,7 +57,7 @@ const LoginExpert: React.FC = (): JSX.Element => {
           })
 
        } catch (error) {
-        
+        return navigate ('/')
        } 
 
 

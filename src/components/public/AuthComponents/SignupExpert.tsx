@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './SignupExpert.module.css'
-import { Form, Input, Button, Row, Col, Select, DatePicker, notification, } from 'antd';
+import { Form, Input, Button, Row, Col, Select, notification, } from 'antd';
 import {MdMail,MdOutlineError} from 'react-icons/md'
 
 const SignupExpert: React.FC = () => {

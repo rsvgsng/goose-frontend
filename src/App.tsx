@@ -16,6 +16,7 @@ import SignupStudent from "./components/public/AuthComponents/SignupStudent";
 import SignupExpert  from "./components/public/AuthComponents/SignupExpert";
 import Signup from "./components/public/AuthComponents/Signup";
 import Dashboard from "./components/public/PrivateComponents/ExpertComponents/Dashboard";
+import DocumentsStep from "./components/public/AuthComponents/DocumentsStep";
 
 
 
@@ -39,8 +40,8 @@ const  App:React.FC=():JSX.Element=> {
                   {/* student dashboard */}
 
                 <Route element={<PrivateRoute/>}> 
-                  <Route path="/dashboard" element={<Dashboard />} />
-                    
+                  <Route  path="/dashboard"   element={<Dashboard />}  />
+                   <Route  path='/setup/initial/expert' element={<DocumentsStep/>} />
                 </Route>
           
                 <Route path="*" element={<NotFound />} />

@@ -1,0 +1,32 @@
+.document_section{
+    padding-top:30px;
+    background-color: rgb(241, 255, 233);
+    padding-bottom: 30px;
+}
+
+.document_wrapper{
+    width: 65%;
+    box-shadow: 0px 0px 13px 1px #00000087;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 30px;
+}
+.document_title p{
+    font-size: 40px;
+    color: #3a3939;
+    margin-top:10px;
+    margin-bottom: 15px;
+    font-family: 'Jomhuria', cursive;
+
+}
+.document_container{
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .document_wrapper,.successEmail__wrapper{
+        width: 90%;
+    }
+}
