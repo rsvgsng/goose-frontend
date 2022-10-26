@@ -37,3 +37,8 @@ button:hover{
   color: white;
 }
 
+.ant-menu-item-selected{
+  background-color: #31A12E !important;
+  border-color  : #31A12E !important;
+  color: white;
+}

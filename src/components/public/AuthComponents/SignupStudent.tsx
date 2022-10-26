@@ -1,15 +1,20 @@
 import React,{useState} from 'react'
 import styles from './SignupStudent.module.css'
 import { Form, Input, Button, Row, Col, Select, DatePicker, notification, } from 'antd';
+import {MdMail,MdOutlineError} from 'react-icons/md'
 
 const { Option } = Select;
 
 const SignupStudent: React.FC = () => {
   const [loadingg,setLoading] = useState(false)
-  
+  const [success,setSuccess] = React.useState(false)
+  const [email,setEmail]  = React.useState('')
+
   const   onFinish =  async (values: any) => {
     setLoading(true)
-      await  fetch('http://localhost:8000/api/v1/signup/m', {
+    setEmail(values.email)
+    
+    await  fetch('http://localhost:8000/api/v1/signup/m', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -20,6 +25,7 @@ const SignupStudent: React.FC = () => {
       .then(res => res.json())
       .then(data => {
        if(data.code===200){
+        setSuccess(true)
         notification.success({
           message: 'Acount Created Successfully. Check your email to verify your account',
         })
@@ -39,6 +45,9 @@ const SignupStudent: React.FC = () => {
       console.log('Failed:', errorInfo);
     };
   
+
+    if(success)return(<EmailScreen message={email} />)
+
 
   return (
 
@@ -223,3 +232,15 @@ const SignupStudent: React.FC = () => {
 }
 
 export default SignupStudent
+
+const EmailScreen = ({ message }: { message: string }) => {
+  console.log(message)
+  return(
+      <section className={styles.expert__section}>
+          <div className={styles.successEmail__wrapper}>
+             {message? <MdMail/>:<MdOutlineError style={{color:'red'}}/>}
+              <p> {message?`A Email with verification link has been sent to your email ${message}`:'Oppps! Something went wrong'}. </p>
+              </div>  
+          </section>
+  )
+}

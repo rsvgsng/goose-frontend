@@ -17,8 +17,45 @@
     margin-top:10px;
     margin-bottom: 15px;
     font-family: 'Jomhuria', cursive;
+}
+
+
+    .expert__section{
+        padding-top:30px;
+        background-color: rgb(241, 255, 233);
+        padding-bottom: 30px;
+    
     }
 
+    .successEmail__wrapper{
+        width: 45%;
+        padding-top: 180px;
+        padding-bottom: 180px;
+        box-shadow: 0px 0px 13px 1px #00000087;
+        margin: auto;
+        background-color: #ffffff;
+        border-radius: 7px;
+        text-align: center;
+        padding-right: 30px;
+        padding-left: 30px;
+        
+    }
+    .successEmail__wrapper p {
+    font-size: 35px;
+    color: #424040;
+
+    margin-top:20px;
+    margin-bottom: 15px;
+    font-family: 'Jomhuria', cursive;
+}
+.successEmail__wrapper svg{
+    width: 100px;
+    
+    height: 100px;
+    margin: auto;
+    color: green;
+    
+}
 @media screen and (max-width: 900px) {
     .form__wrapper{
         width: 90%;

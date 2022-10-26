@@ -1,57 +1,107 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './App.css'
-import { Routes, Route } from "react-router-dom";
-import PrivateRoute from "./components/misc/PrivateRoute";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 //Components
 
-import NavBar from "./components/NavBar";
 import HomeMain from "./components/public/HomeMain";
 import Login from "./components/public/AuthComponents/Login";
 import LoginExpert from "./components/public/AuthComponents/LoginExpert";
 import LoginStudent from "./components/public/AuthComponents/LoginStudent";
 import Footer from "./components/Footer";
-import NotFound from "./components/NotFound";
 import SignupStudent from "./components/public/AuthComponents/SignupStudent";
-import SignupExpert  from "./components/public/AuthComponents/SignupExpert";
+import SignupExpert from "./components/public/AuthComponents/SignupExpert";
 import Signup from "./components/public/AuthComponents/Signup";
-import Dashboard from "./components/public/PrivateComponents/ExpertComponents/Dashboard";
 import DocumentsStep from "./components/public/AuthComponents/DocumentsStep";
+import Dashboard from "./components/public/PrivateComponents/ExpertComponents/Dashboard";
+import Layout from "./components/Layout";
+import Main from "./components/public/PrivateComponents/ExpertComponents/Main";
+import { useDispatch } from "react-redux";
+import { isLoggedSlice } from "./store/Slices/isLogged";
 
+const App: React.FC = (): JSX.Element => {
 
+  const dispatch = useDispatch();
+  const { isLogged } = useSelector((state: any) => state.isLoggedIn);
+  const {code,msg} = useSelector((state: any) => state.dashboard.data);
 
+  const [cl, setCl] = useState<Boolean>(true);
 
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token)
+    dispatch(isLoggedSlice.actions.login());
+    setCl(false);
+    
+  }, [])
 
-const  App:React.FC=():JSX.Element=> {
+  if(cl) return <div></div>
   return (
-    <React.Fragment>
-      {/* make mobile nav */}
-              <NavBar />
-              <Routes>
 
-                <Route path="/" element={<HomeMain />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/login/expert" element={<LoginExpert />} />
-                <Route path="/login/student" element={<LoginStudent />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/signup/student" element={<SignupStudent />} />
-                <Route path="/signup/expert" element={<SignupExpert />} />
-                <Route path="/signup/expert/next" element={<SignupExpert />} />
-                  {/* student dashboard */}
 
-                <Route element={<PrivateRoute/>}> 
-                  <Route  path="/dashboard"   element={<Dashboard />}  />
-                   <Route  path='/setup/initial/expert' element={<DocumentsStep/>} />
-                </Route>
-          
-                <Route path="*" element={<NotFound />} />
+    <Routes>
 
-              </Routes>
-              <Footer />
-       
-      </React.Fragment>
+      {
+        !isLogged  ?
+      <Route element={<Layout />} >
+        <Route path="/" element={<HomeMain />} />
 
-  );
+        <Route path="/login" element={<Login />} />
+        <Route path="/login/expert" element={<LoginExpert />} />
+        <Route path="/login/student" element={<LoginStudent />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup/student" element={<SignupStudent />} />
+        <Route path="/signup/expert" element={<SignupExpert />} />
+      </Route>
+
+      
+      :
+
+          code==400 || code == 403 ?
+          <Route element={<Main />} >
+            <Route path="/about" element={<>Without Verifying you cannot proceed further</>} />
+            <Route path="/" element={<DocumentsStep />} />
+          </Route>
+      
+      
+      :
+      
+      
+      <Route element={<Main/>}>
+        <Route path="/" element={<Dashboard/>} />
+        <Route path="/hi" element={<>Hello</>} />
+      </Route>
+      }
+
+
+
+
+      <Route path="*" element={
+      <Navigate to="/" />
+      } />
+
+
+    </Routes>
+
+  )
 }
 
 export default App;
+
+
+function Home() {
+  return (<h1>Welcome to dashboard</h1>)
+}
+function About() {
+  return (<h1>Welcome to about</h1>)
+}
+function Settings() {
+  return (<h1>Settings Page</h1>)
+}
+function Notfound() {
+  return (<h1>Not found</h1>)
+}
+
+
+

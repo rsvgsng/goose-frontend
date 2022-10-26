@@ -1,0 +1,9 @@
+.siteLayout{
+    margin-left: 200px;
+}
+
+@media screen and (max-width:991px) {
+    .siteLayout{
+        margin-left: 0px;
+    }
+}

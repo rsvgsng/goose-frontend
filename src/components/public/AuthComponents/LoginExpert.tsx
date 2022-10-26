@@ -2,9 +2,6 @@ import React, { useState,useEffect } from 'react'
 import styles from './LoginExpert.module.css'
 import { RiLoginCircleFill } from 'react-icons/ri'
 import { notification } from 'antd'
-import { useNavigate } from 'react-router-dom'
-
-
 
 
 const LoginExpert: React.FC = (): JSX.Element => {
@@ -13,7 +10,6 @@ const LoginExpert: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
-  let navigate = useNavigate();
 
 
 
@@ -38,17 +34,13 @@ const LoginExpert: React.FC = (): JSX.Element => {
             body: JSON.stringify({ email, password }),
           })
 
-
           .then((res) => res.json())  
           .then((data) => {
            if(data.code==200) {
             localStorage.removeItem('token') 
 
              localStorage.setItem('token', data.token) 
-
-            if(data.ds===false) return navigate('/setup/initial/expert');
-
-            return navigate ('/dashboard')
+            return window.location.href='/'
             
            }else{
              notification.error({message: 'Error',description:data.msg,placement:'topRight'})
@@ -57,7 +49,7 @@ const LoginExpert: React.FC = (): JSX.Element => {
           })
 
        } catch (error) {
-        return navigate ('/')
+        // return navigate ('/')
        } 
 
 

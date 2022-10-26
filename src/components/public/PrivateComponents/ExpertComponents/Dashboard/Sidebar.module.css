@@ -1,0 +1,17 @@
+.logo{
+    padding-top:20px;
+    display: flex;
+    justify-content: center;
+    padding-bottom:20px;
+}
+.logo svg{
+    font-size: 30px;
+    color: white;
+}
+
+.logo span{
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+
+}

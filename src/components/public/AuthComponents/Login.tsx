@@ -27,11 +27,11 @@ const Login: React.FC = (): JSX.Element => {
                     </Link>
                 </div>
             </div>
-
+           
 
         </section>
 
-
+        
     )
 }
 

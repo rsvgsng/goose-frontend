@@ -5,7 +5,7 @@
 }
 
 .document_wrapper{
-    width: 65%;
+    width: 90%;
     box-shadow: 0px 0px 13px 1px #00000087;
     margin: auto;
     background-color: #ffffff;
@@ -24,6 +24,13 @@
     margin-top: 20px;
 }
 
+.apporval__container{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 @media screen and (max-width: 900px) {
     .document_wrapper,.successEmail__wrapper{
