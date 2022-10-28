@@ -1,6 +1,5 @@
-import { Badge, Avatar, Menu,List, Dropdown, Layout } from 'antd';
+import { Badge, Avatar, Drawer, Layout,List, Space } from 'antd';
 import React from 'react'
-import { useSelector } from 'react-redux';
 import { MdNotifications, MdLogout } from 'react-icons/md'
 import Sidebar from './Dashboard/Sidebar'
 import styles from './Main.module.css'
@@ -8,22 +7,49 @@ import { Outlet } from 'react-router-dom';
 function Main({ children }: any) {
   const { Header, Content, Footer, Sider } = Layout;
 
-  const { isLogged } = useSelector((state: any) => state.isLoggedIn);
+  const [visible, setVisible] = React.useState(false);
 
-  const menu = (
-        <List
-        >
-          <List.Item>
-            <List.Item.Meta
-              // avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-              title={<a href="https://ant.design">Ant Design Title 1</a>}
-              description="Ant Design, a design "
-            />
-          </List.Item>
-        </List>
-  )
   return (
     <React.Fragment>
+      {/* <Drawer
+        placement="top"
+        open={visible}
+        closeIcon={false}
+        onClose={() => setVisible(false)}
+        height={500}
+        extra={<div className={styles.close} onClick={() => setVisible(false)}>X</div>}
+        title="Notifications"
+      >
+        
+        <List
+    itemLayout="vertical"
+    
+
+    dataSource={[
+      {
+        title: 'Ant Design Title 1',
+      },
+      {
+        title: 'Ant Design Title 2',
+      },
+      {
+        title: 'Ant Design Title 3',
+      },
+      {
+        title: 'Ant Design Title 4',
+      },
+    ]}
+    renderItem={item => (
+      <List.Item>
+        <List.Item.Meta
+          avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+          title={<a href="https://ant.design">{item.title}</a>}
+          description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+        />
+      </List.Item>
+    )}
+  />
+        </Drawer> */}
       <Layout hasSider>
 
 
@@ -31,6 +57,7 @@ function Main({ children }: any) {
           breakpoint="lg"
           collapsedWidth="0"
           theme="dark"
+          
           style={{
             overflow: 'hidden',
             height: '100vh',
@@ -40,6 +67,8 @@ function Main({ children }: any) {
             bottom: 0,
           }}
         >
+
+          
 
           <Sidebar />
 
@@ -52,29 +81,35 @@ function Main({ children }: any) {
           <Header
             className="site-layout-background"
             style={{
-              padding: "0",
               color: 'white',
               display: 'flex',
-              justifyContent: 'space-between',
+              justifyContent: 'center',
               paddingLeft:'20px',
               paddingRight:'20px',
               height: '64px',
+
             }}
 
           >
-            <div className="left_items">
- 
-              Welcome on board ! Rishav
 
-            </div>
-
-
-            <div className="right_items">
-              <Dropdown overlay={menu} trigger={["click"]} >
-              <Badge size='small' count={5}>
-                <Avatar  icon={<MdNotifications/>}    size="large" />
+            <div className={styles.items}>
+           
+              <Space 
+              size={20}
+              >
+              <Badge size='default' count={51}>
+                <Avatar  onClick={()=>setVisible(true)}   icon={<MdNotifications/>}     size="large" />
               </Badge>
-              </Dropdown>
+              <Avatar icon={<MdLogout/>} size="large"  onClick={
+                () => {
+                  localStorage.removeItem('token');
+                  window.location.reload();
+                }
+              }/>
+              </Space>
+             
+        
+          
             </div>
 
           </Header>

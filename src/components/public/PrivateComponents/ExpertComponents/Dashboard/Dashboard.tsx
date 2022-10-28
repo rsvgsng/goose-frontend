@@ -7,11 +7,13 @@ import { HiOutlineCurrencyDollar } from 'react-icons/hi'
 import { MdOutlinePending } from 'react-icons/md'
 import { FaRegSmileBeam } from 'react-icons/fa'
 import { AiOutlinePercentage } from 'react-icons/ai'
+import { Tabs, Divider, Steps, Button } from 'antd';
 
 function Dashboard(): JSX.Element {
   const dispatch = useDispatch<any>();
   const [cl, setCl] = React.useState<Boolean>(true);
   const { isLoading, data } = useSelector((state: any) => state.dashboard);
+  const { Step } = Steps;
 
   React.useEffect(() => {
     dispatch(fetchDb())
@@ -32,7 +34,7 @@ function Dashboard(): JSX.Element {
       },
       xaxis: {
         categories: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-        , 
+        ,
         labels: {
           style: {
             colors: 'white',
@@ -48,9 +50,9 @@ function Dashboard(): JSX.Element {
         }
       }
       ,
-        fill:{
-          colors: ['#F9A826']
-        }
+      fill: {
+        colors: ['#1890ff']
+      }
     },
 
     series: [
@@ -183,7 +185,7 @@ function Dashboard(): JSX.Element {
 
               <div className="col-md-5">
                 <div className={styles.chart__left}>
-                <div className={styles.earn__chart}>
+                  <div className={styles.earn__chart}>
                     <h1> Accepted Tasks this Week</h1>
                   </div>
                   <Chart
@@ -192,12 +194,49 @@ function Dashboard(): JSX.Element {
                     type="bar"
 
                   />
-             
+
                 </div>
               </div>
               <div className="col-md-7">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className={styles.running__tasks}>
+                      <h1>Current Activity</h1>
 
+                      <Steps progressDot current={2} direction="vertical">
+                        <Step title="Posted" description="A assignment was posted on 5th October." />
+                        <Step title="Accepted" description="You accepted the assignment on 5th October." />
+                        <Step  title="In Progress" description="This assignment must be compeleted by 10th October." />
+                        <Step title="Finish" />
+                      </Steps>
+                      <div className={styles.bottom__activity}>
+                        <Button type="primary">Finished ?</Button>
 
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className={styles.details__block}>
+                      <h1>Details: </h1>
+                      <Tabs
+                        defaultActiveKey="1"
+
+                      >
+                        <Tabs.TabPane tab="Recent" key="1" 
+                            
+                        >
+                          daskdjalksd
+                        </Tabs.TabPane>
+                        <Tabs.TabPane tab="Failed" key="2">
+                          das
+                        </Tabs.TabPane>
+                        <Tabs.TabPane tab="Running" key="3">
+                          a
+                        </Tabs.TabPane>
+                      </Tabs>
+                    </div>
+                  </div>
+                </div>
 
               </div>
             </div>

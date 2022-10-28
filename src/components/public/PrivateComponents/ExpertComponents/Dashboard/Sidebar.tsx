@@ -2,7 +2,7 @@ import React from 'react'
 import { Menu, Badge } from "antd";
 import styles from './Sidebar.module.css'
 import { GiKiwiBird ,GiInfo} from 'react-icons/gi'
-import {MdOutlineSettings,MdError,MdOutlineExplore,MdHome,MdMessage} from 'react-icons/md'
+import {MdOutlineSettings,MdError,MdOutlineAssignmentTurnedIn,MdHome,MdMessage} from 'react-icons/md'
 import {useNavigate } from 'react-router-dom';
 
 import {HiOutlineDocumentText} from 'react-icons/hi'
@@ -30,9 +30,10 @@ const Sidebar = () => {
     { label: 'Dashboard', key: '1', icon: <MdHome /> ,
     onClick : () => navigate('/')
     },
-    { label: `Explore `,
+
+    { label: `Assignments `,
      key: '2',
-      icon: <MdOutlineExplore />,
+      icon: <MdOutlineAssignmentTurnedIn />,
       onClick : () => navigate('/Explore')
       }
       ,

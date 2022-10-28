@@ -6,6 +6,11 @@
     min-height: 280px;
 
 }
+.items span{
+    cursor: pointer;
+    background-color: transparent;
+}
+
 @media screen and (max-width:991px) {
     .siteLayout{
         margin-left: 0px;

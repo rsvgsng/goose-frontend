@@ -65,3 +65,14 @@ button:hover{
 .ant-menu-item svg{
   font-size: 20px  !important;
 }
+
+
+.ant-tabs-tab-btn{
+  color: #d4d4d4 !important;
+}
+.ant-steps-item-title{
+  color: #d4d4d4 !important;
+}
+.ant-steps-item-description{
+  color: #d4d4d4 !important;
+}
