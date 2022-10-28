@@ -15,7 +15,7 @@ import { store } from "./store/store";
 // dispatch -> sends actions to the reducer
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('goose') as HTMLElement
 );
 root.render(
     <BrowserRouter>

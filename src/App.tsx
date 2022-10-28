@@ -14,7 +14,7 @@ import SignupStudent from "./components/public/AuthComponents/SignupStudent";
 import SignupExpert from "./components/public/AuthComponents/SignupExpert";
 import Signup from "./components/public/AuthComponents/Signup";
 import DocumentsStep from "./components/public/AuthComponents/DocumentsStep";
-import Dashboard from "./components/public/PrivateComponents/ExpertComponents/Dashboard";
+import Dashboard from "./components/public/PrivateComponents/ExpertComponents/Dashboard/Dashboard";
 import Layout from "./components/Layout";
 import Main from "./components/public/PrivateComponents/ExpertComponents/Main";
 import { useDispatch } from "react-redux";
@@ -32,8 +32,9 @@ const App: React.FC = (): JSX.Element => {
     const token = localStorage.getItem('token');
     if (token)
     dispatch(isLoggedSlice.actions.login());
+    console.log(code)
     setCl(false);
-    
+
   }, [])
 
   if(cl) return <div></div>
@@ -46,7 +47,6 @@ const App: React.FC = (): JSX.Element => {
         !isLogged  ?
       <Route element={<Layout />} >
         <Route path="/" element={<HomeMain />} />
-
         <Route path="/login" element={<Login />} />
         <Route path="/login/expert" element={<LoginExpert />} />
         <Route path="/login/student" element={<LoginStudent />} />
@@ -57,24 +57,21 @@ const App: React.FC = (): JSX.Element => {
 
       
       :
-
           code==400 || code == 403 ?
+
           <Route element={<Main />} >
-            <Route path="/about" element={<>Without Verifying you cannot proceed further</>} />
             <Route path="/" element={<DocumentsStep />} />
+            <Route path="/About" element={<>Without Verifying you cannot proceed further</>} />
           </Route>
-      
       
       :
       
-      
       <Route element={<Main/>}>
         <Route path="/" element={<Dashboard/>} />
-        <Route path="/hi" element={<>Hello</>} />
+        <Route path="/Explore" element={<>Nice Explore</>} />
+        <Route path="/Settings" element={<>settings page</>} />
       </Route>
       }
-
-
 
 
       <Route path="*" element={

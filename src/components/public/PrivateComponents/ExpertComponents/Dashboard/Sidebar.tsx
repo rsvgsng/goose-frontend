@@ -1,9 +1,10 @@
 import React from 'react'
-import { Menu, Button } from "antd";
+import { Menu, Badge } from "antd";
 import styles from './Sidebar.module.css'
-import { AiOutlineHome } from 'react-icons/ai'
-import {useNavigate } from 'react-router-dom';
 import { GiKiwiBird ,GiInfo} from 'react-icons/gi'
+import {MdOutlineSettings,MdError,MdOutlineExplore,MdHome,MdMessage} from 'react-icons/md'
+import {useNavigate } from 'react-router-dom';
+
 import {HiOutlineDocumentText} from 'react-icons/hi'
 import { useSelector } from 'react-redux';
 const Sidebar = () => {
@@ -16,21 +17,44 @@ const Sidebar = () => {
     onClick : () => navigate('/')
     },  
     { label: 'About', key: '2', icon: <GiInfo /> ,
-    onClick : () => navigate('/about')
-    },
+    onClick : () => navigate('/About')
+    }
+
   ]
 
 
 
   const items = [
-    { label: 'Dashboard', key: '1', icon: <AiOutlineHome /> ,
+
+
+    { label: 'Dashboard', key: '1', icon: <MdHome /> ,
     onClick : () => navigate('/')
     },
-    { label: 'Tasks',
+    { label: `Explore `,
      key: '2',
-      icon: <AiOutlineHome />,
-      onClick : () => navigate('/hi')
-      } 
+      icon: <MdOutlineExplore />,
+      onClick : () => navigate('/Explore')
+      }
+      ,
+      { label: `Messages `, key: '3', icon: <MdMessage /> ,
+       onClick : () => navigate('/Messages')
+       },
+       { label: 'Settings',
+       key: '4',
+        icon: <MdOutlineSettings />,
+        onClick : () => navigate('/Settings')
+       } ,
+       
+       { label: 'Report',
+       unverified: true,
+       key: '5',
+        icon: <MdError />,
+        onClick : () => navigate('/Report')
+       }
+
+
+
+       
   ];
 
 

@@ -348,7 +348,7 @@ function Review() {
                 </Steps>
                 <div className={styles.apporval__container}>
                     <h1>Your Documents are currently under Review. 
-                       <br /> You will be notified via Email after we verify your documents.</h1>
+                       <br /> You will be notified via Email once we verify your documents.</h1>
                 </div>
             </div>
 

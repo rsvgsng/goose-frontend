@@ -1,7 +1,10 @@
 :root{
   --back_color:rgb(241, 255, 233);
 }
-
+h1{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
 .bak{
   border:1px solid black;
 }
@@ -38,7 +41,27 @@ button:hover{
 }
 
 .ant-menu-item-selected{
-  background-color: #31A12E !important;
-  border-color  : #31A12E !important;
+  background-color: #073a8d !important;
   color: white;
+  border-radius: 10px;
+}
+
+.ant-layout-sider-children ul{
+  border-top: #7c7c7c6d 1px solid;
+  margin-top: 13px !important;
+  padding-top: 30px !important;
+}
+.ant-layout-sider-children ul li{
+  margin-left: 10px !important;
+  margin-bottom: 15px !important;
+  margin-right: 10px !important;
+}
+.ant-menu-item{
+  padding: 23px !important; 
+  font-size: 20px !important;
+  border-radius: 10px;
+
+}
+.ant-menu-item svg{
+  font-size: 20px  !important;
 }

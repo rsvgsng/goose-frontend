@@ -1,7 +1,11 @@
 .siteLayout{
     margin-left: 200px;
 }
+.content__container {
+    background: #fff;
+    min-height: 280px;
 
+}
 @media screen and (max-width:991px) {
     .siteLayout{
         margin-left: 0px;

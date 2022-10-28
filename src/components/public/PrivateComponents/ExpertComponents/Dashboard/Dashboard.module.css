@@ -1,0 +1,51 @@
+.section__dashboard{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.title__block{
+    padding-left: 16px;
+    user-select: none;
+    margin-bottom: 10px;
+    padding-right: 13px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    border-radius: 5px;
+    place-content: space-between;
+    background-color: #020722db;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: 0px 0px 3px 0px rgba(56, 50, 50, 0.748);
+}
+.title__block__title h1{
+    font-weight: 800;
+    font-size: 30px;
+    color: #fff;
+}
+.title__block__title h3{
+    font-weight: 400;
+    font-size: 25px;
+    color: #fff;
+}
+.right__icon svg{
+    color: white;
+    
+    font-size: 70px;
+}
+.section__second{
+    margin-top: 40px;
+}
+
+
+
+.chart__left{
+    background-color: #020722db;
+    box-shadow: 0px 0px 3px 0px rgba(56, 50, 50, 0.748);
+    border-radius: 6px;
+}
+.earn__chart{
+    padding: 20px;
+    color: white;
+    padding-top: 30px;
+}
