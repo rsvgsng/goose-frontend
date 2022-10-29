@@ -17,6 +17,7 @@ import DocumentsStep from "./components/public/AuthComponents/DocumentsStep";
 import Dashboard from "./components/public/PrivateComponents/ExpertComponents/Dashboard/Dashboard";
 import Layout from "./components/Layout";
 import Main from "./components/public/PrivateComponents/ExpertComponents/Main";
+import Assignment from "./components/public/PrivateComponents/ExpertComponents/Dashboard/Assignment";
 import { useDispatch } from "react-redux";
 import { isLoggedSlice } from "./store/Slices/isLogged";
 
@@ -68,7 +69,7 @@ const App: React.FC = (): JSX.Element => {
       
       <Route element={<Main/>}>
         <Route path="/" element={<Dashboard/>} />
-        <Route path="/Explore" element={<>Nice Explore</>} />
+        <Route path="/Assignment" element={<Assignment/>} />
         <Route path="/Settings" element={<>settings page</>} />
       </Route>
       }

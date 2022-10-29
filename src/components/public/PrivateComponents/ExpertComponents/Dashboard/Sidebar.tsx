@@ -34,12 +34,9 @@ const Sidebar = () => {
     { label: `Assignments `,
      key: '2',
       icon: <MdOutlineAssignmentTurnedIn />,
-      onClick : () => navigate('/Explore')
+      onClick : () => navigate('/Assignment')
       }
-      ,
-      { label: `Messages `, key: '3', icon: <MdMessage /> ,
-       onClick : () => navigate('/Messages')
-       },
+,
        { label: 'Settings',
        key: '4',
         icon: <MdOutlineSettings />,

@@ -33,7 +33,8 @@ function Dashboard(): JSX.Element {
 
       },
       xaxis: {
-        categories: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        categories: ["Week 1","Week 2","Week 3","Week 4"]
+
         ,
         labels: {
           style: {
@@ -41,6 +42,7 @@ function Dashboard(): JSX.Element {
             fontSize: '12px'
           },
         }
+        
       },
       yaxis: {
         labels: {
@@ -49,16 +51,13 @@ function Dashboard(): JSX.Element {
           }
         }
       }
-      ,
-      fill: {
-        colors: ['#1890ff']
-      }
+      
     },
 
     series: [
       {
         name: "Tasks",
-        data: [30, 40, 45, 50, 449, 68, 5]
+        data: [3, 0, 4, 2]
       }
 
     ]
@@ -160,7 +159,7 @@ function Dashboard(): JSX.Element {
 
                     <div className={styles.title__block__title}>
                       <h1>74%</h1>
-                      <h3>Success Rate </h3>
+                      <h3>Acceptance Rate </h3>
                     </div>
                     <div className={styles.right__icon}>
                       <AiOutlinePercentage />
@@ -206,7 +205,7 @@ function Dashboard(): JSX.Element {
                   <Chart
                     options={chart.options}
                     series={chart.series}
-                    type="bar"
+                    type="line"
 
                   />
 
@@ -247,25 +246,20 @@ function Dashboard(): JSX.Element {
 
 
                       <div className={styles.profile__section__meta__wrapper}>
-
-
                         <div className={styles.profile__meta__box}>
                           <AiFillLike />
                           <h1>412</h1>
-
                         </div>
 
 
                         <div className={styles.profile__meta__box}>
                           <AiFillDislike />
                           <h1>10</h1>
-
                         </div>
 
                         <div className={styles.profile__meta__box}>
                           <MdLeaderboard />
-                          <h1>{ith(321)}</h1>
-
+                          <h1>{ith(55)}</h1>
                         </div>
                       </div>
 

@@ -79,3 +79,6 @@ button:hover{
 .ant-tabs{
   color: #fff !important;
 }
+.center{
+  align-items: center;
+}

@@ -1,0 +1,64 @@
+.assignment__section__wrapper{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px
+}
+.current__assignments h3{
+    text-align: center;
+}
+.current__assignments{
+    margin-bottom: 40px;
+    background-color: #020722db;
+    padding: 20px;
+    border-radius: 7px;
+    color: white;
+}
+
+.past__assignments{
+    background-color: #020722db;
+    padding: 20px;
+    border-radius: 7px;
+
+}
+.current__assignments__wrapper{
+    background-image: linear-gradient(358deg, #0d0b0b 0%, #1c1e41 100%);
+    box-shadow: 0 0 0px 1px rgb(136 136 136 / 47%);
+    padding: 30px;
+    margin-top: 30px;
+}
+.current__assignments__wrapper__title{
+    position: relative;
+}
+
+.current__assignments__wrapper__title h1{ 
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.current__assignments__wrapper__action{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 7px;
+    background-color: #68729713;
+    padding: 20px;
+}
+.current__assignments__wrapper__action button {
+    margin-bottom: 20px;
+}
+.progress__bar__current, .progress__bar__past p{
+    margin-top: 30px;
+    user-select: none;
+}
+
+.assignment__section__small__meta{
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.assignment__section__small__meta__item{
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #3e3f4970;
+}
