@@ -1,42 +1,47 @@
-.assignment__section__wrapper{
-    padding-top: 30px;
-    padding-left: 40px;
-    padding-right: 40px
+.assignment__section__wrapper {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px
 }
-.current__assignments h3{
+
+.current__assignments h3 {
     text-align: center;
 }
-.current__assignments{
+
+.current__assignments {
+    
     margin-bottom: 40px;
     background-color: #020722db;
     padding: 20px;
-    border-radius: 7px;
     color: white;
 }
 
-.past__assignments{
+.past__assignments {
     background-color: #020722db;
     padding: 20px;
     border-radius: 7px;
 
 }
-.current__assignments__wrapper{
+
+.current__assignments__wrapper {
     background-image: linear-gradient(358deg, #0d0b0b 0%, #1c1e41 100%);
     box-shadow: 0 0 0px 1px rgb(136 136 136 / 47%);
     padding: 30px;
     margin-top: 30px;
 }
-.current__assignments__wrapper__title{
+
+.current__assignments__wrapper__title {
     position: relative;
 }
 
-.current__assignments__wrapper__title h1{ 
+.current__assignments__wrapper__title h1 {
     font-size: 20px;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
-.current__assignments__wrapper__action{
+.current__assignments__wrapper__action {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -44,21 +49,113 @@
     background-color: #68729713;
     padding: 20px;
 }
+
 .current__assignments__wrapper__action button {
     margin-bottom: 20px;
 }
-.progress__bar__current, .progress__bar__past p{
+
+.progress__bar__current,
+.progress__bar__past p {
     margin-top: 30px;
     user-select: none;
 }
 
-.assignment__section__small__meta{
+.assignment__section__small__meta {
     margin-bottom: 20px;
     user-select: none;
 }
 
-.assignment__section__small__meta__item{
+.assignment__section__small__meta__item {
     padding: 10px;
     border-radius: 7px;
+    font-size: 14px;
     background-color: #3e3f4970;
+}
+
+.assignment__meta__cats {
+    margin-top: 25px;
+    display: flex;
+    user-select: none;
+    flex-wrap: wrap;
+
+}
+
+.assignment__meta__cats span {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    border-radius: 7px;
+    background-color: #3e3f4970;
+}
+
+.modal__wrapper {
+    backdrop-filter: blur(5px);
+    background-color: #0d0b0b98;
+}
+
+.modal__wrapper__content {
+    border-radius: 7px;
+    color: white;
+}
+
+.modal__wrapper__content__title h1 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+.modal__wrapper__content__right {
+    padding-top: 3px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    background-color: #68729713;
+    place-content: center;
+    border-radius: 7px;
+    word-break: break-word;
+
+}
+.modal__wrapper__content__right__item {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.modal__wrapper__content__right__item span {
+    font-size : 15px;
+    font-weight: 600;
+    
+}
+.modal__wrapper__content__right__item svg{
+    margin-right:10px;
+}
+.modal__wrapper__content__desc p{
+    text-align: left;
+    font-size: 16px;
+}
+
+.modal__wrapper__content__right__attachments{
+    padding-top: 3px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    background-color: #68729713;
+    place-content: center;
+    border-radius: 7px;
+    word-break: break-word;
+
+}
+.modal__wrapper__content__right__attachments__item{
+    display: flex;
+    place-content: center;
+    flex-wrap: wrap;
+}
+.modal__wrapper__content__right__attachments__item span{
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+
 }

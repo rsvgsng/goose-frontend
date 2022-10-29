@@ -224,8 +224,11 @@ function Dashboard(): JSX.Element {
                         <Step title="Finish" />
                       </Steps>
                       <div className={styles.bottom__activity}>
-                        <Button type="primary">View</Button>
-                        <Button type="primary">Finished ?</Button>
+                        <Button type="primary" 
+                        style={{
+                          backgroundColor: 'rgb(255 255 255 / 44%)',
+                          borderColor: 'rgb(255 255 255 / 44%)'
+                      }}>View</Button>
 
                       </div>
                     </div>

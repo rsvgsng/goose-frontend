@@ -77,7 +77,7 @@
 .bottom__activity{
     display: flex;
     margin-top: 15px;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .profile__section{
@@ -144,7 +144,7 @@
  }   
 
 .profile__meta__box{
-    background-color: #0d4992;
+    background-color: #a9b8cb05;
     padding:10px;
     margin-top: 10px;
     margin-right: 10px;
