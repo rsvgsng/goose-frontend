@@ -35,11 +35,13 @@
 }
 .section__second{
     margin-top: 40px;
+    
 }
 
 
 
 .chart__left{
+    margin-bottom: 15px;
     background-color: #020722db;
     box-shadow: 0px 0px 3px 0px rgba(56, 50, 50, 0.748);
     border-radius: 6px;
@@ -55,6 +57,7 @@
     box-shadow: 0px 0px 3px 0px rgba(56, 50, 50, 0.748);
     border-radius: 6px;
     padding: 20px;
+    height: 500px;
     color: white;
     padding-top: 30px;
 }
@@ -63,6 +66,7 @@
     box-shadow: 0px 0px 3px 0px rgba(56, 50, 50, 0.748);
     border-radius: 6px;
     padding: 20px;
+    margin-bottom: 15px;
     color: white;
     user-select: none;
     padding-top: 30px;
@@ -72,5 +76,91 @@
 }
 .bottom__activity{
     display: flex;
-    justify-content: flex-end;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.profile__section{
+    background-color: #020722db;
+    box-shadow: 0px 0px 3px 0px rgba(56, 50, 50, 0.748);
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+    user-select: none;
+    padding-top: 30px;
+
+}
+
+.profile__section__image{
+    height: 100px;
+    width: 100px;
+    user-select: none;
+    position: relative;
+    background-color: #cfd5cd;
+    border-radius: 50%;
+    padding: 2px;
+}
+.profile__section__image svg{
+
+    position: absolute;
+    top: 85%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #fff;
+    background-color: #0072ff;
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+.profile__section__image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: center;
+}
+
+.profile__section__name{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+
+ .profile__section__meta__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 100%;
+ }   
+
+.profile__meta__box{
+    background-color: #0d4992;
+    padding:10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 9px;
+    overflow: hidden;
+    width: 30%;
+    text-align: center;
+}
+.profile__meta__box svg{
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+.profile__meta__box h1{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
 }

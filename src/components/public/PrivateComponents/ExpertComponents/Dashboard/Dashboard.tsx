@@ -4,10 +4,11 @@ import { fetchDb } from '../../../../../store/Slices/Dashboard';
 import styles from './Dashboard.module.css'
 import Chart from "react-apexcharts";
 import { HiOutlineCurrencyDollar } from 'react-icons/hi'
-import { MdOutlinePending } from 'react-icons/md'
+import { MdOutlinePending ,MdLeaderboard} from 'react-icons/md'
 import { FaRegSmileBeam } from 'react-icons/fa'
-import { AiOutlinePercentage } from 'react-icons/ai'
+import { AiOutlinePercentage, AiFillLike, AiFillDislike } from 'react-icons/ai'
 import { Tabs, Divider, Steps, Button } from 'antd';
+import { TiTick } from 'react-icons/ti'
 
 function Dashboard(): JSX.Element {
   const dispatch = useDispatch<any>();
@@ -20,7 +21,6 @@ function Dashboard(): JSX.Element {
   }, []);
 
   // chart
-
   var chart = ({
     options: {
       chart: {
@@ -64,6 +64,21 @@ function Dashboard(): JSX.Element {
     ]
 
   })
+
+  function ith(i:any) {
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
+}
 
 
   if (isLoading) return <></>
@@ -206,39 +221,61 @@ function Dashboard(): JSX.Element {
                       <Steps progressDot current={2} direction="vertical">
                         <Step title="Posted" description="A assignment was posted on 5th October." />
                         <Step title="Accepted" description="You accepted the assignment on 5th October." />
-                        <Step  title="In Progress" description="This assignment must be compeleted by 10th October." />
+                        <Step title="In Progress" description="This assignment must be compeleted by 10th October." />
                         <Step title="Finish" />
                       </Steps>
                       <div className={styles.bottom__activity}>
+                        <Button type="primary">View</Button>
                         <Button type="primary">Finished ?</Button>
 
                       </div>
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className={styles.details__block}>
-                      <h1>Details: </h1>
-                      <Tabs
-                        defaultActiveKey="1"
 
-                      >
-                        <Tabs.TabPane tab="Recent" key="1" 
-                            
-                        >
-                          daskdjalksd
-                        </Tabs.TabPane>
-                        <Tabs.TabPane tab="Failed" key="2">
-                          das
-                        </Tabs.TabPane>
-                        <Tabs.TabPane tab="Running" key="3">
-                          a
-                        </Tabs.TabPane>
-                      </Tabs>
+                    <div className={styles.profile__section}>
+
+                      <div className={styles.profile__section__image}>
+                        <img src="https://i.ibb.co/qd8pGZB/Tj-M7s-CNz-400x400.jpg" alt="profile" />
+                        <TiTick />
+                      </div>
+                      <div className={styles.profile__section__name}>
+                        <h1>Risav Ghising</h1>
+                      </div>
+
+
+
+
+                      <div className={styles.profile__section__meta__wrapper}>
+
+
+                        <div className={styles.profile__meta__box}>
+                          <AiFillLike />
+                          <h1>412</h1>
+
+                        </div>
+
+
+                        <div className={styles.profile__meta__box}>
+                          <AiFillDislike />
+                          <h1>10</h1>
+
+                        </div>
+
+                        <div className={styles.profile__meta__box}>
+                          <MdLeaderboard />
+                          <h1>{ith(321)}</h1>
+
+                        </div>
+                      </div>
+
+
                     </div>
                   </div>
                 </div>
 
               </div>
+
             </div>
           </div>
 
@@ -262,3 +299,26 @@ function Dashboard(): JSX.Element {
 }
 
 export default Dashboard
+
+
+
+function DetailsComponentTab() {
+  return (
+    <React.Fragment>
+      <div className={styles.details__block__content}>
+        <div className={styles.details__block__content__title}>
+          <h1>Maths algebra problems</h1>
+        </div>
+        <div className={styles.details__block__content__desc}>
+          <p>Assignment 1 is a assignment that is given to you by the admin. You must complete this assignment by 10th October. </p>
+        </div>
+        <div className={styles.details__block__content__date}>
+          <p>Submitted on : 10th October</p>
+          <p>Status: Completed</p>
+        </div>
+
+      </div>
+      <hr />
+    </React.Fragment>
+  )
+}
