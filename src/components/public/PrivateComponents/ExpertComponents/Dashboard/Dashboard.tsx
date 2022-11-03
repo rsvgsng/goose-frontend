@@ -8,6 +8,8 @@ import { MdOutlinePending ,MdLeaderboard} from 'react-icons/md'
 import { FaRegSmileBeam } from 'react-icons/fa'
 import { AiOutlinePercentage, AiFillLike, AiFillDislike } from 'react-icons/ai'
 import { Tabs, Divider, Steps, Button } from 'antd';
+import { GiEasterEgg } from 'react-icons/gi'
+
 import { TiTick } from 'react-icons/ti'
 
 function Dashboard(): JSX.Element {
@@ -111,7 +113,7 @@ function Dashboard(): JSX.Element {
                       <h3>Total Earned </h3>
                     </div>
                     <div className={styles.right__icon}>
-                      <HiOutlineCurrencyDollar />
+                      <GiEasterEgg />
 
 
                     </div>
