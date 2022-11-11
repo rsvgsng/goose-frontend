@@ -16,11 +16,6 @@
     color: white;
 }
 
-.past__assignments {
-    background-color: #020722db;
-    padding: 20px;
-    margin-top: 30px;
-}
 
 .current__assignments__wrapper {
     background-image: linear-gradient(358deg, #0d0b0b 0%, #1c1e41 100%);
@@ -291,4 +286,10 @@
 }
 .new__assignment__wrapper__content__right__action__bidding{
     margin-top: 20px;
+}
+
+
+.past__assignments {
+    background-color: #020722db;
+    padding: 20px;
 }

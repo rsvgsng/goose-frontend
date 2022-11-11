@@ -37,20 +37,15 @@ const Sidebar = () => {
       onClick : () => navigate('/Assignment')
       }
 ,
-       { label: 'Settings',
-       key: '4',
-        icon: <MdOutlineSettings />,
-        onClick : () => navigate('/Settings')
-       } ,
        { label: 'Billing',
-       key: '5',
+       key: '3',
         icon: <MdOutlineAttachMoney />,
         onClick : () => navigate('/Billing')
        } ,
        
        { label: 'Report',
        unverified: true,
-       key: '6',
+       key: '4',
         icon: <MdError />,
         onClick : () => navigate('/Report')
        }

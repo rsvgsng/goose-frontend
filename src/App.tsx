@@ -70,7 +70,6 @@ const App: React.FC = (): JSX.Element => {
       <Route element={<Main/>}>
         <Route path="/" element={<Dashboard/>} />
         <Route path="/Assignment" element={<Assignment/>} />
-        <Route path="/Settings" element={<>settings page</>} />
       </Route>
       }
 

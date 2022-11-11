@@ -106,7 +106,7 @@ function Main({ children }: any) {
                   window.location.reload();
                 }
               }/>
-              1 egg =  {0.10061349694890}$
+              {/* 1 egg =  {0.10061349694890}$ */}
               </Space>
              
         

@@ -19,7 +19,7 @@ const HomeMain:React.FC= ():JSX.Element  => {
       <AssignmentShow/>
       <SectionThreeStudent/>
       <TalentCategory/>
-
+    <SectionThreeExpert/>
 
 
     </React.Fragment>

@@ -17,10 +17,10 @@ const Assignment: React.FC = (): JSX.Element => {
     return (
 
         <div className={styles.assignment__section__wrapper}>
-
             {/* <NewAssignment /> */}
             {/* <NoActiveAssignment/> */}
-            <HasActiveAssignment />
+            {/* <HasActiveAssignment /> */}
+            <RecentAssignments/>
 
         </div>
 
@@ -28,8 +28,6 @@ const Assignment: React.FC = (): JSX.Element => {
 }
 
 export default Assignment
-
-
 
 
 function HasActiveAssignment() {
@@ -109,9 +107,9 @@ function HasActiveAssignment() {
                                     <Avatar size={80} src={'https://api.lorem.space/image/movie?w=200&h=220'} shape="square" />
                                     <Avatar size={80} src={'https://api.lorem.space/image/movie?w=1300&h=220'} shape="square" />
 
+
+
  */}
-
-
 
                                 </div>
 
@@ -270,35 +268,6 @@ function HasActiveAssignment() {
 }
 
 
-function RecentAssignments() {
-    return (
-        <div className="col-md-12">
-
-            <div className={styles.past__assignments}>
-                <h3>Past</h3>
-
-            </div>
-        </div>
-    )
-}
-
-function NoActiveAssignment() {
-    return (
-        <div className="col-md-12">
-            <div className={styles.no__assignments__wrapper}>
-                <div className={styles.no__active__assignments}>
-
-                    <h3>No Active Assignment</h3>
-
-                    <MdEmojiEmotions />
-                    <p>There are no assignments found for you at the moment. Please check back later.</p>
-
-                </div>
-            </div>
-        </div>
-
-    )
-}
 
 
 function NewAssignment() {
@@ -359,7 +328,7 @@ function NewAssignment() {
 
 
                                 <div className={styles.modal__wrapper__content__right__attachments__item}>
-                         
+{/*                          
                                     <Avatar size={80} src={'https://api.lorem.space/image/movie?w=150&h=220'} shape="square" />
                                     <Avatar size={80} src={'https://api.lorem.space/image/movie?w=150&h=300'} shape="square" />
                                     <Avatar size={80} src={'https://api.lorem.space/image/movie?w=150&h=500'} shape="square" />
@@ -373,7 +342,7 @@ function NewAssignment() {
                                     
                                     
                                     
-                          
+                           */}
 
 
 
@@ -402,7 +371,7 @@ function NewAssignment() {
                         <div className={styles.new__assignment__wrapper__main}>
                             <div className="row center">
 
-                                <div className="col-md-9">
+                                <div className="col-md-9 ">
                                     <div className={styles.new__assignment__wrapper__content__left__title}>
                                         <span>New Assignment</span>
                                         <h1>Assignment on Java using OOP Concept</h1>
@@ -413,7 +382,7 @@ function NewAssignment() {
 
                                 </div>
 
-                                <div className="col-md-3">
+                                <div className="col-md-3  ">
                                     <div className={styles.new__assignment__wrapper__content__right}>
                                         <div className={styles.new__assignment__wrapper__content__right__action}>
 
@@ -460,7 +429,7 @@ function NewAssignment() {
                                                 </Button> 
                                                 <br />
                                                 
-                                                  <Button block type="primary" style={{
+                                                  <Button block type="primary" onClick={()=>setNewassmodel(true)} style={{
                                         backgroundColor: '#3e3f4970',
                                         borderColor: '#3e3f4970'
                                     }} >
@@ -469,9 +438,6 @@ function NewAssignment() {
                                             </div>
 
                                         </div>
-
-
-
 
                                     </div>
                                 </div>
@@ -486,3 +452,44 @@ function NewAssignment() {
         </React.Fragment>
     )
 }
+
+
+function NoActiveAssignment() {
+    return (
+        <div className="col-md-12">
+            <div className={styles.no__assignments__wrapper}>
+                <div className={styles.no__active__assignments}>
+
+                    <h3>No Active Assignment</h3>
+
+                    <MdEmojiEmotions />
+                    <p>There are no assignments found for you at the moment. Please check back later.</p>
+
+                </div>
+            </div>
+        </div>
+
+    )
+}
+
+function RecentAssignments() {
+    return (
+        <div className="col-md-12">
+
+            <div className={styles.past__assignments}>
+                <h3>Past</h3>
+
+            </div>
+        </div>
+    )
+}
+
+
+
+
+
+
+
+
+
+
